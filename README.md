@@ -1,2 +1,4 @@
-# project-euler
-My solves of Project Euler's problems
+# Project Euler
+https://projecteuler.net/
+
+My solves of its problems
