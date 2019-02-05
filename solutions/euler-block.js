@@ -20,7 +20,7 @@ const EulerBlock = {
   success: {
     "p0001": "Congratulations, the answer you gave to problem 1 is correct. You are the 821258th person to have solved this problem. This problem had a difficulty rating of 5%.",
     "p0002": "Congratulations, the answer you gave to problem 2 is correct. You are the 657088th person to have solved this problem. This problem had a difficulty rating of 5%.",
-    "p0003": "???",
+    "p0003": "Congratulations, the answer you gave to problem 3 is correct. You are the 469761st person to have solved this problem. You have earned 1 new award: 'Baby Steps: Solve three problems'. This problem had a difficulty rating of 5%",
     print: (id) => {
         document.querySelector('#'+id+' .euler-comment').innerHTML = EulerBlock.success[id];
     }

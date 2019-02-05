@@ -5,32 +5,21 @@
     initForm: () => {
       document.querySelector('#' + Problem.id + ' .submit').addEventListener('click', Problem.onSubmit);
     },
-    simple: {
-      sieve: [],
-      max: 30,
-      fill: () => {
-        for(let i=0; i<Problem.simple.max; i++) {
-          Problem.simple.sieve.push(true);
-        }
-      }
-    },
-    onSubmit: () => {
-      Problem.simple.fill();
-      for(let i=2; i<Problem.simple.max; i++) {
-        if (Problem.simple.sieve[i] === false) {
-          continue;
-        }
-        if (Math.pow(i,2) > Problem.simple.max) {
-          console.debug('pow', i);
-          break;
-        }
-        for(let j=i+1; j<Problem.simple.max; j++) {
-          if (j % i === 0) {
-            Problem.simple.sieve[j] == false;
+    getListOfFactors: (n) => {
+      let sq = Math.ceil(Math.sqrt(n));
+      let list = [];
+      for (let i=3; i<=sq; i++) {
+        if (n % i === 0) {
+          if (Problem.getListOfFactors(i).length === 0) {
+            list.push(i);
           }
         }
       }
-      console.debug(Problem.simple.sieve);
+      return list;
+    },
+    onSubmit: () => {
+      const factors = Problem.getListOfFactors(600851475143);
+      Problem.setResult(factors[factors.length - 1]);
     },
     setResult: (value) => {
       document.querySelector('#' + Problem.id + ' .result').value = value;
