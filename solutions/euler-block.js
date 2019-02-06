@@ -6,6 +6,7 @@ const EulerBlock = {
         "p0003": "The prime factors of 13195 are 5, 7, 13 and 29. What is the largest prime factor of the number 600851475143 ?",
         "p0004": "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two 3-digit numbers.",
         "p0005": "2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?",
+        "p0006": "The sum of the squares of the first ten natural numbers is 1^2 + 2^2 + ... + 10^2 = 385. The square of the sum of the first ten natural numbers is (1 + 2 + ... + 10)^2 = 55^2 = 3025. Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640. Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.",
         print: () => {
             for (let i in EulerBlock.problems) {
                 if (typeof EulerBlock.problems[i] === 'string') {
@@ -20,11 +21,12 @@ const EulerBlock = {
         }
     },
     success: {
-        "p0001": "Congratulations, the answer you gave to problem 1 is correct. You are the 821258th person to have solved this problem. This problem had a difficulty rating of 5%.",
-        "p0002": "Congratulations, the answer you gave to problem 2 is correct. You are the 657088th person to have solved this problem. This problem had a difficulty rating of 5%.",
-        "p0003": "Congratulations, the answer you gave to problem 3 is correct. You are the 469761st person to have solved this problem. You have earned 1 new award: 'Baby Steps: Solve three problems'. This problem had a difficulty rating of 5%",
-        "p0004": "Congratulations, the answer you gave to problem 4 is correct. You are the 416714th person to have solved this problem. This problem had a difficulty rating of 5%.",
-        "p0005": "Congratulations, the answer you gave to problem 5 is correct. You are the 423905th person to have solved this problem. This problem had a difficulty rating of 5%.",
+        "p0001": "You are the 821258th person to have solved this problem. This problem had a difficulty rating of 5%.",
+        "p0002": "You are the 657088th person to have solved this problem. This problem had a difficulty rating of 5%.",
+        "p0003": "You are the 469761st person to have solved this problem. You have earned 1 new award: 'Baby Steps: Solve three problems'. This problem had a difficulty rating of 5%",
+        "p0004": "You are the 416714th person to have solved this problem. This problem had a difficulty rating of 5%.",
+        "p0005": "You are the 423905th person to have solved this problem. This problem had a difficulty rating of 5%.",
+        "p0006": "You are the 426497th person to have solved this problem. This problem had a difficulty rating of 5%.",
         print: (id) => {
             document.querySelector('#' + id + ' .euler-comment').innerHTML = EulerBlock.success[id];
         }
