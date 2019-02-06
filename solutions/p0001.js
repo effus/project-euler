@@ -2,9 +2,6 @@
 (function(){
   const Problem = {
     id: 'p0001',
-    initForm: () => {
-      document.querySelector('#' + Problem.id + ' .submit').addEventListener('click', Problem.onSubmit);
-    },
     isMultiple: (number) => {
       return (number % 3) === 0 || (number % 5) === 0;
     },
@@ -15,15 +12,8 @@
           sum += i;
         }
       }
-      Problem.setResult(sum);
-    },
-    setResult: (value) => {
-      document.querySelector('#' + Problem.id + ' .result').value = value;
-      if (typeof EulerBlock !== 'undefined') {
-        EulerBlock.success.print(Problem.id);
-      }
+      EulerBlock.setResult(Problem.id, sum);
     }
   }
-
-  Problem.initForm();
+  EulerBlock.bindSubmit(Problem.id, Problem.onSubmit);
 }());

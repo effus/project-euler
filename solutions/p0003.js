@@ -2,9 +2,6 @@
 (function(){
   const Problem = {
     id: 'p0003',
-    initForm: () => {
-      document.querySelector('#' + Problem.id + ' .submit').addEventListener('click', Problem.onSubmit);
-    },
     getListOfFactors: (n) => {
       let sq = Math.ceil(Math.sqrt(n));
       let list = [];
@@ -19,14 +16,8 @@
     },
     onSubmit: () => {
       const factors = Problem.getListOfFactors(600851475143);
-      Problem.setResult(factors[factors.length - 1]);
-    },
-    setResult: (value) => {
-      document.querySelector('#' + Problem.id + ' .result').value = value;
-      if (typeof EulerBlock !== 'undefined') {
-        EulerBlock.success.print(Problem.id);
-      }
+      EulerBlock.setResult(Problem.id, factors[factors.length - 1]);
     }
   }
-  Problem.initForm();
+  EulerBlock.bindSubmit(Problem.id, Problem.onSubmit);
 }());

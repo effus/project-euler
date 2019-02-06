@@ -2,9 +2,6 @@
 (function(){
   const Problem = {
     id: 'p0004',
-    initForm: () => {
-      document.querySelector('#' + Problem.id + ' .submit').addEventListener('click', Problem.onSubmit);
-    },
     isPalindrom: (number) => {
         number = String(number);
         if (number.length % 2 !== 0) {
@@ -26,14 +23,8 @@
                 }
             }
         }
-        Problem.setResult(max);
-    },
-    setResult: (value) => {
-      document.querySelector('#' + Problem.id + ' .result').value = value;
-      if (typeof EulerBlock !== 'undefined') {
-        EulerBlock.success.print(Problem.id);
-      }
+        EulerBlock.setResult(Problem.id, max);
     }
   }
-  Problem.initForm();
+  EulerBlock.bindSubmit(Problem.id, Problem.onSubmit);
 }());

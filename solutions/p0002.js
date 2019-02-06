@@ -2,9 +2,6 @@
 (function(){
   const Problem = {
     id: 'p0002',
-    initForm: () => {
-      document.querySelector('#' + Problem.id + ' .submit').addEventListener('click', Problem.onSubmit);
-    },
     fib: {
       a: 1,
       b: 2,
@@ -22,14 +19,8 @@
         }
         Problem.fib.next();
       }
-      Problem.setResult(Problem.fib.evenSum);
-    },
-    setResult: (value) => {
-      document.querySelector('#' + Problem.id + ' .result').value = value;
-      if (typeof EulerBlock !== 'undefined') {
-        EulerBlock.success.print(Problem.id);
-      }
+      EulerBlock.setResult(Problem.id, Problem.fib.evenSum);
     }
   }
-  Problem.initForm();
+  EulerBlock.bindSubmit(Problem.id, Problem.onSubmit);
 }());
