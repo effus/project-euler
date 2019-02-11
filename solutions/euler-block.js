@@ -40,8 +40,11 @@ const EulerBlock = {
             "84580156166097919133875499200524063689912560717606\n"+
             "05886116467109405077541002256983155200055935729725\n"+
             "71636269561882670428252483600823257530420752963450\n"+
-            "Find the thirteen adjacent digits in the 1000-digit number that have the greatest product.\n"+
+            "Find the thirteen adjacent digits in the 1000-digit number that have the greatest product.\n" +
             "What is the value of this product?",
+        "p0009": "A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a^2 + b^2 = c^2\n" +
+            "For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2. There exists exactly one Pythagorean triplet\n"+
+            "for which a + b + c = 1000. Find the product abc.",
         print: () => {
             for (let i in EulerBlock.problems) {
                 if (typeof EulerBlock.problems[i] === 'string') {
@@ -64,6 +67,7 @@ const EulerBlock = {
         "p0006": "You are the 426497th person to have solved this problem. This problem had a difficulty rating of 5%.",
         "p0007": "You are the 365183rd person to have solved this problem. This problem had a difficulty rating of 5%.",
         "p0008": "You are the 306739th person to have solved this problem. This problem had a difficulty rating of 5%.",
+        "p0009": "You are the 310739th person to have solved this problem. This problem had a difficulty rating of 5%.",
         print: (id) => {
             document.querySelector('#' + id + ' .euler-comment').innerHTML = EulerBlock.success[id];
         }
