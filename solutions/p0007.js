@@ -1,6 +1,5 @@
 'use strict';
 (function(){
-  const MaxNumber = 100;
   const Problem = {
     id: 'p0007',
     primeNumbers: [],
