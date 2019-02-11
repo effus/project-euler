@@ -45,6 +45,7 @@ const EulerBlock = {
         "p0009": "A Pythagorean triplet is a set of three natural numbers, a < b < c, for which, a^2 + b^2 = c^2\n" +
             "For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2. There exists exactly one Pythagorean triplet\n"+
             "for which a + b + c = 1000. Find the product abc.",
+        "p0010": "The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17. Find the sum of all the primes below two million.",
         print: () => {
             for (let i in EulerBlock.problems) {
                 if (typeof EulerBlock.problems[i] === 'string') {
@@ -68,6 +69,7 @@ const EulerBlock = {
         "p0007": "You are the 365183rd person to have solved this problem. This problem had a difficulty rating of 5%.",
         "p0008": "You are the 306739th person to have solved this problem. This problem had a difficulty rating of 5%.",
         "p0009": "You are the 310739th person to have solved this problem. This problem had a difficulty rating of 5%.",
+        "p0010": "You are the 284531st person to have solved this problem. You have earned 1 new award: Decathlete: Solve ten consecutive problems. This problem had a difficulty rating of 5%.",
         print: (id) => {
             document.querySelector('#' + id + ' .euler-comment').innerHTML = EulerBlock.success[id];
         }
