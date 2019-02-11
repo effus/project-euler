@@ -63,7 +63,7 @@ const EulerBlock = {
         "p0005": "You are the 423905th person to have solved this problem. This problem had a difficulty rating of 5%.",
         "p0006": "You are the 426497th person to have solved this problem. This problem had a difficulty rating of 5%.",
         "p0007": "You are the 365183rd person to have solved this problem. This problem had a difficulty rating of 5%.",
-        "p0008": "...",
+        "p0008": "You are the 306739th person to have solved this problem. This problem had a difficulty rating of 5%.",
         print: (id) => {
             document.querySelector('#' + id + ' .euler-comment').innerHTML = EulerBlock.success[id];
         }
