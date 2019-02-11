@@ -9,10 +9,11 @@
         for (let a=0; a<=998; a++) {
             for (let b=a+1; b<=999; b++) {
                 for (let c=b+1; c<=1000; c++) {
-                    let result = Problem.checkTriplet(a, b, c);
-                    if (result === true && a + b + c === 1000) {
-                        EulerBlock.setResult(Problem.id, a * b * c);
-                        return;
+                    if (a + b + c !== 1000) {
+                        continue;
+                    }
+                    if (Problem.checkTriplet(a, b, c) === true) {
+                        return EulerBlock.setResult(Problem.id, a * b * c);
                     }
                 }
             }
