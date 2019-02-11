@@ -7,6 +7,7 @@ const EulerBlock = {
         "p0004": "A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99. Find the largest palindrome made from the product of two 3-digit numbers.",
         "p0005": "2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?",
         "p0006": "The sum of the squares of the first ten natural numbers is 1^2 + 2^2 + ... + 10^2 = 385. The square of the sum of the first ten natural numbers is (1 + 2 + ... + 10)^2 = 55^2 = 3025. Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640. Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.",
+        "p0007": "By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13. What is the 10 001st prime number?",
         print: () => {
             for (let i in EulerBlock.problems) {
                 if (typeof EulerBlock.problems[i] === 'string') {
@@ -27,6 +28,7 @@ const EulerBlock = {
         "p0004": "You are the 416714th person to have solved this problem. This problem had a difficulty rating of 5%.",
         "p0005": "You are the 423905th person to have solved this problem. This problem had a difficulty rating of 5%.",
         "p0006": "You are the 426497th person to have solved this problem. This problem had a difficulty rating of 5%.",
+        "p0007": "You are the 365183rd person to have solved this problem. This problem had a difficulty rating of 5%.",
         print: (id) => {
             document.querySelector('#' + id + ' .euler-comment').innerHTML = EulerBlock.success[id];
         }
